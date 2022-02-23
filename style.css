@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-hightlight: transparent;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  height: 99vh;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FBF8F3;
+}
+
+.container {
+  background-color: #0C1A2E;
+  color: ghostwhite;
+  
+  padding: 1.5rem;
+  
+  border-radius: 8px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, .5);
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  
+  font-size: 1.3rem;
+}
+
+#number {
+  margin: 1rem 0;
+}
+
+.btn-container {
+  margin: 1.2rem 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-container > button {
+  display: block;
+  padding: .8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  
+  color: ghostwhite;
+  transition: .2s;
+}
+
+.btn-container > button:last-child {
+  margin-left: 1rem;
+}
+
+#yes {
+  background-color: #02c952;
+}
+
+#no {
+  background-color: #D94936;
+}
+
+.btn-container > button:active, #leave:active {
+  transform: scale(.93);
+  opacity: .8;
+}
+
+.modal-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .4);
+  transition: .3s;
+}
+
+.modal {
+  position: relative;
+  
+  min-width: 400px;
+  min-height: 300px;
+  width: 60vw;
+  height: 40vh;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: .4s;
+}
+
+.modal > h1 {
+  margin-bottom: .8rem;
+}
+
+.modal small {
+  font-size: 6px;
+  margin: .8rem;
+}
+
+#leave {
+  display: block;
+  padding: .8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  
+  color: ghostwhite;
+  transition: .2s;
+  background-color: #D94936;
+  
+  position: absolute;
+  bottom: 1rem;
+}
+
+.disable {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.disable .modal {
+  transform: translateY(3rem);
+}
+
+.active .modal {
+  transform: translateY(0);
+}
